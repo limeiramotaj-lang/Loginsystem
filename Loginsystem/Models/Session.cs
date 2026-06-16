@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Loginsystem.Services
+namespace Loginsystem.Models
 {
     public static class Session
     {
-        public static User LoggeedUser { get; set; }    
+        public static User LoggedUser { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 using Loginsystem.Data;
 using Loginsystem.Forms;
-using Loginsystem.Services;
+using Loginsystem.Models;
 
 namespace Loginsystem
 {
@@ -19,12 +19,12 @@ namespace Loginsystem
             }
             while (true)
             {
-                using (var loginForm = new LoginForm())
+                using (var loginForm = new LoginForms())
                 {
                     var result = loginForm.ShowDialog();
                     if (result == DialogResult.OK && Session.LoggedUser != null)
                     {
-                        Application.Run(new MainForm());
+                        Application.Run(new MainForms());
                         // Se o MainForm fechar, volta para o loop (logout ou restart)
                         // Se quiser realmente encerrar, break;else
                         {

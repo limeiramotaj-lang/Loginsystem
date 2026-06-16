@@ -15,8 +15,7 @@ namespace Loginsystem.Data
        optionsBuilder)
         {
             // Altere a connection string conforme sua instância do SQL Server
-            optionsBuilder.UseSqlServer(@"Server=(localdb)
-\MSSQLLocalDB;Database=LoginSystemDb;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=LoginSystemDb;Trusted_Connection=True;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

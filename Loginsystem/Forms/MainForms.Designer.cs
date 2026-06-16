@@ -28,12 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MainForm";
+            btnAdminPanel = new Button();
+            btnLogout = new Button();
+            lblWelcome = new Label();
+            SuspendLayout();
+            // 
+            // btnAdminPanel
+            // 
+            btnAdminPanel.Location = new Point(85, 201);
+            btnAdminPanel.Name = "btnAdminPanel";
+            btnAdminPanel.Size = new Size(75, 23);
+            btnAdminPanel.TabIndex = 0;
+            btnAdminPanel.Text = "Admin";
+            btnAdminPanel.UseVisualStyleBackColor = true;
+            btnAdminPanel.Click += btnAdminPanel_Click_1;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Location = new Point(231, 201);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(75, 23);
+            btnLogout.TabIndex = 1;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click_1;
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Location = new Point(100, 77);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(57, 15);
+            lblWelcome.TabIndex = 2;
+            lblWelcome.Text = "Welcome";
+            // 
+            // MainForms
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(540, 318);
+            Controls.Add(lblWelcome);
+            Controls.Add(btnLogout);
+            Controls.Add(btnAdminPanel);
+            Name = "MainForms";
+            Text = "MainForm";
+            Load += MainForms_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnAdminPanel;
+        private Button btnLogout;
+        private Label lblWelcome;
     }
 }

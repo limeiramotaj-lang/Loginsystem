@@ -30,76 +30,79 @@
         {
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            linkLabel1 = new LinkLabel();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            btnLogin = new Button();
+            lnkRegister = new LinkLabel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(65, 88);
+            label1.Location = new Point(67, 59);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(33, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "User:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(74, 145);
+            label2.Location = new Point(67, 102);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(67, 15);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "Passoword:";
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Location = new Point(109, 88);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            txtUsername.Location = new Point(140, 56);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(127, 23);
+            txtUsername.TabIndex = 2;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(118, 145);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            txtPassword.Location = new Point(140, 99);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(100, 23);
+            txtPassword.TabIndex = 3;
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Location = new Point(91, 198);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnLogin.Location = new Point(85, 176);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(75, 23);
+            btnLogin.TabIndex = 4;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // linkLabel1
+            // lnkRegister
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(197, 198);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(60, 15);
-            linkLabel1.TabIndex = 5;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkLabel1";
+            lnkRegister.AutoSize = true;
+            lnkRegister.Location = new Point(229, 179);
+            lnkRegister.Name = "lnkRegister";
+            lnkRegister.Size = new Size(50, 15);
+            lnkRegister.TabIndex = 5;
+            lnkRegister.TabStop = true;
+            lnkRegister.Text = "Registro";
+            lnkRegister.LinkClicked += lnkRegister_LinkClicked;
             // 
             // LoginForms
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(linkLabel1);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            ClientSize = new Size(460, 285);
+            Controls.Add(lnkRegister);
+            Controls.Add(btnLogin);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "LoginForms";
             Text = "LoginForms";
+            Load += LoginForms_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -108,9 +111,9 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private LinkLabel linkLabel1;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
+        private Button btnLogin;
+        private LinkLabel lnkRegister;
     }
 }
